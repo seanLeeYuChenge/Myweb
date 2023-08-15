@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Topic - Sean of Curriculum Vitae</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<style>
+		.image-container {
+			text-align: left;
+			border: 5px solid #C5E1A5; /* 淺綠色的框 */
+			background-color: #80CBC4; /* 綠藍色的背景 */
+			padding-left: 50px; /* 將內容左邊靠 50px */
+ 			padding-right: 50px; /* 將內容右邊靠 50px */
+			}
+
+		.image-container img {
+			display: block;
+			margin: 0 auto;
+			}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">sean</a>
+			</div>
+			<ul>
+				<li>
+					<a href="index.html">首頁</a>
+				</li>
+				<li class="selected">
+					<a href="about.html">專題</a>
+				</li>
+				<li>
+					<a href="hairstyle.html">專長與經驗</a>
+				</li>
+				<li>
+					<a href="news.html">自傳</a>
+				</li>
+				<li>
+					<a href="contact.html">聯繫方式</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div class="image-container">
+			<h3 style="font-family: DFKai-sb;padding:10px 0px; color: rgb(0, 0, 0); text-align: center;font-weight: bold;">結合獨立成分分析與粒子群聚最佳化法
+                </h3>
+            <h3 style="font-family: DFKai-sb;padding:10px 0px; color: rgb(0, 0, 0); text-align: center;font-weight: bold;">以即時影像測量心率與心率變異
+                </h3>
+			<b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">研究目的</b>
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">
+				本研究目的在於設計一套非接觸式易操作並且方便量測生理訊號的方法，透過WebCam擷取人臉訊號，取出綠色波長的樣本訊號並加以進行演算，就能即時連續量測出該使用者的心率與心率變異的生理參數，因此在公共衛生上可以大幅地降低風險，以低成本與增加儀器方便性，大幅提升醫療的品質，以達到醫生對於診斷精神疾病與心血管疾病相關病症時的輔助診斷工具。
+			</p>
+			<b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb; line-height: 28px;font-size: 20px;">流程圖</b>
+			<img src="images/系統流程圖.png" alt="" style="width: 450px; 
+			height: 700px;">
+			
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">
+				本系統主要分為以下4個部分:訊號前處理、波形處理、頻域轉換、運算生理參數。
+			</p>
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">
+				1.	透過WebCam獲取影像，利用dilb的81點臉部辨識的演算法，設置出感興趣區域來減少受測者頭部晃動所帶來影響，將感興趣區域擷取到的圖像分離出RGB三通道並提取綠通道，將每張圖提取出的綠通道做平均，累積成一個序列。
+			</p>
+            <p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">
+				2.	將訊號進行去勢波動分析與正規化調整訊號準位，在利用獨立成分分析結合粒子群聚最佳化法去除波形偽影，最後使用帶通濾波，濾器出心率及心律變異的頻帶寬度。
+			</p>
+            <p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">
+				3.	將帶通濾波器濾出的波形透過快速傅立葉轉換，將心跳訊號的時間序列轉為頻域，找出波形最高峰值當做輸出，另外以功率頻譜密度呈現心率變異VLF、LF和HF。
+			</p>
+            <p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">
+				4.	最後將這些量測出的生理訊號，必須透過一些公式與演算才能轉換成我們看得懂的數值。
+			</p>
+            
+			<h3 style="font-family: DFKai-sb;padding:10px 0px; color: rgb(0, 0, 0); text-align: center;font-weight: bold;">成果展示</h3>
+			<b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">感興趣區域(ROI)</b>
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;color: rgb(17, 0, 255);">
+				系統會將偵測的區域做切割的動作，以降低分析影像的雜訊干擾。
+			</p>
+			<img src="images/ROI.jpg" alt="" style="width: 400px; 
+			height: 100px;">
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;color: rgb(17, 0, 255);">系統擷取到ROI後，將會分離出RGB三原色的通道，並提取綠色通道</p>
+			
+            <img src="images/ROI2.jpg" alt="" style="width: 400px; 
+			height: 100px;">
+            <b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">訊號波形圖</b>
+            <p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;color: rgb(17, 0, 255);">系統會測量約20秒，經由系統所擷取出綠色通道的圖片做平均，得到一個平均值，並將測量的每張圖片累積出一筆訊號序列。</p>
+
+            <img src="images/訊號圖.jpg" alt="" style="width: 400px; 
+			height: 250px;">
+
+			<b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">正規化波形分析圖</b>
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px; color: rgb(17, 0, 255);">
+				將訊號序列正規化可以降低頭部移動所影響的偏移，接著將訊號做去勢波動分析調整準位為0。
+			</p>
+			<img src="images/訊號圖1.jpg" alt="" style="width: 400px; 
+			height: 250px;">
+            <p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 16px;"></p>
+            <b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">去勢波動波形分析圖</b>
+            <p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 16px;"></p>
+			<img src="images/訊號圖1.jpg" alt="" style="width: 400px; 
+			height: 250px;">
+
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 16px;"></p>
+            <b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">波形處理</b>
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px; color: rgb(17, 0, 255);">
+				RPPG 的測量經常受到環境光照的影響，這邊使用 PSO-ICA來消除光照造成的干擾，如圖4.12所示，接著經由0.4~10Hz的帶通濾波器，將雜訊濾除，並放大訊號，如圖4.13所示，最後進行波峰波谷檢測，利用幀數計算資料執行時間得出波峰到波峰的時間差。
+			</p>
+			<img src="images/訊號圖2.jpg" alt="" style="width: 400px; 
+			height: 250px;">
+			<b style="padding-left: 380px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">圖 4.12 PSO-ICA波形圖</b>
+            <img src="images/訊號圖3.jpg" alt="" style="width: 400px; 
+			height: 250px;">
+			<b style="padding-left: 380px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">圖 4.13 帶通濾波器波形圖</b>
+            <p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 16px;"></p>
+            <b style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">頻域轉換</b>
+			<p style="padding-left: 50px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px; color: rgb(17, 0, 255);">
+				由圖4.14所示，將帶通濾波器波形，使用快速傅立葉轉換得到頻率，再經由公式計算出心率。使用帶通濾波器濾出HF和LF的頻段，再由功率頻譜密度轉換頻域如圖4.15，並用公式計算心率變異參數。
+			</p>
+			<img src="images/訊號圖4.jpg" alt="" style="width: 400px; 
+			height: 250px;">
+			<b style="padding-left: 380px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">圖 4.14 快速傅立葉轉換波形圖</b>
+            <img src="images/訊號圖5.jpg" alt="" style="width: 400px; 
+			height: 250px;">
+			<b style="padding-left: 380px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 18px;">圖 4.15 功率頻譜密度圖</b>
+            <a href="about.html" style="padding-left: 460px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">1<a href="project2.html" style="padding-left: 5px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">2<a href="project.html" style="padding-left: 5px;padding-right: 50px;font-family: DFKai-sb;line-height: 28px;font-size: 20px;">3</a></a></a>
+            
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+		
+		</div>
+		<div>
+		
+		</div>
+		<div>
+		
+		</div>
+	</div>
+</body>
+</html>
